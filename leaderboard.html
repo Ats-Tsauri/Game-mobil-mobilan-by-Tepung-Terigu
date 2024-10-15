@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall of Fame - Leaderboard</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid white;
+            text-align: center;
+        }
+
+        th {
+            background-color: #444;
+        }
+
+        td {
+            background-color: #555;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hall of Fame</h1>
+    <div id="leaderboardContainer"></div>
+    <button id="backToMenuButton">Back to Menu</button>
+
+    <script>
+        document.getElementById('backToMenuButton').addEventListener('click', () => {
+            window.location.href = 'menu.html'; // Kembali ke menu utama
+        });
+    </script>
+    <script src="leaderboard.js"></script>
+</body>
+</html>

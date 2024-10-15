@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menu</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>2D Car Game</h1>
+    <input type="text" id="playerName" placeholder="Enter your name">
+    <button id="startGameButton">Start Game</button>
+    <button id="hallOfFameButton">Hall of Fame</button>
+
+    <script>
+        const startGameButton = document.getElementById('startGameButton');
+        const hallOfFameButton = document.getElementById('hallOfFameButton');
+
+        startGameButton.addEventListener('click', () => {
+            const playerName = document.getElementById('playerName').value;
+            if (playerName === '') {
+                alert('Please enter your name');
+            } else {
+                // Simpan nama pemain di localStorage untuk digunakan dalam game
+                localStorage.setItem('playerName', playerName);
+                window.location.href = 'index.html'; // Arahkan ke halaman game
+            }
+        });
+
+        hallOfFameButton.addEventListener('click', () => {
+            window.location.href = 'leaderboard.html'; // Arahkan ke halaman Hall of Fame
+        });
+    </script>
+</body>
+</html>
